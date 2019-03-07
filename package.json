@@ -1,0 +1,49 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "author": "dilip",
+  "license": "MIT",
+  "description": "Aruba support portal notification and templates",
+  "scripts": {
+    "clean": "rm -rf build node_modules",
+    "start": "rm -rf build/ && tsc && node ./build/www.js",
+    "dev": "nodemon --ext ts --watch src --exec '../node_modules/.bin/ts-node' ./src/www.ts",
+    "loadMocks": "tsc && node ./build/tasks/loadMocks.js",
+    "lint": "tsconfig-lint",
+    "doc": "typedoc --ignoreCompilerErrors --out ./doc src"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Aruba",
+    "support",
+    "portal",
+    "notification",
+    "and",
+    "template",
+    "manager"
+  ],
+  "main": "build/www.js",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "cookie-parser": "1.4.3",
+    "debug": "3.1.0",
+    "express": "4.16.3",
+    "joi": "14.3.1",
+    "jquery": "3.3.1",
+    "mongoose": "5.0.11",
+    "mongoose-class": "0.1.1",
+    "morgan": "1.9.0",
+    "node-sass-middleware": "0.11.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.0.7",
+    "@types/node": "^9.6.0",
+    "ts-node": "^5.0.1",
+    "tsconfig-lint": "^0.12.0",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.7.2"
+  }
+}
